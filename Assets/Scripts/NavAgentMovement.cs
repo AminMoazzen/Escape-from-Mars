@@ -30,7 +30,7 @@ public class NavAgentMovement : MonoBehaviour
 
     [SerializeField] private UnityEvent onDeactivate;
 
-    private InputAction _moveAction;
+    private InputAction _move;
     private Vector3 _direction;
     private bool _isActive;
 
@@ -66,20 +66,20 @@ public class NavAgentMovement : MonoBehaviour
 
     public void StartAcceptingInput()
     {
-        if (_moveAction == null)
-            _moveAction = inputAction.FindAction("Move", true);
-        _moveAction.Enable();
-        _moveAction.started += Move;
-        _moveAction.canceled += Move;
-        _moveAction.performed += Move;
+        if (_move == null)
+            _move = inputAction.FindAction("Move", true);
+        _move.Enable();
+        _move.started += Move;
+        _move.canceled += Move;
+        _move.performed += Move;
     }
 
     public void StopAcceptingInput()
     {
-        _moveAction.Disable();
-        _moveAction.started -= Move;
-        _moveAction.canceled -= Move;
-        _moveAction.performed -= Move;
+        _move.Disable();
+        _move.started -= Move;
+        _move.canceled -= Move;
+        _move.performed -= Move;
     }
 
     public void Activate()
@@ -99,7 +99,10 @@ public class NavAgentMovement : MonoBehaviour
     private void Update()
     {
         if (_isActive)
+        {
             agent.Move(_direction * (speed.Value * Time.deltaTime));
+            position.Value = transform.position;
+        }
     }
 
     private void Move(InputAction.CallbackContext context)

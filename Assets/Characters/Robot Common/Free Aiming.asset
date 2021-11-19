@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9377ffeb64ba30478a995a8ffc78ae8, type: 3}
-  m_Name: Speed
+  m_Script: {fileID: 11500000, guid: 168ff32065cd13747a95ae8c9d2a0232, type: 3}
+  m_Name: Free Aiming
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: .
-  _value: 5
-  _readOnly: 0
+  _value: 1
+  _readOnly: 1
   _raiseWarning: 1
   _isClamped: 0
   _minClampedValue: 0

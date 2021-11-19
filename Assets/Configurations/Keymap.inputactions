@@ -27,6 +27,14 @@
                     "id": "f1c73afc-0b1d-4282-9626-5934a65bf919",
                     "expectedControlType": "Button",
                     "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "Aim",
+                    "type": "Value",
+                    "id": "b2959364-0faa-4d43-b799-fdbfff7aa2d9",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
                     "interactions": ""
                 }
             ],
@@ -248,6 +256,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f17291c-4107-457c-9ab9-d32114a3f6c7",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Aim",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
