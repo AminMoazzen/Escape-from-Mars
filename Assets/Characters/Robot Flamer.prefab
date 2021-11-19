@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 5583834707321326376}
   - component: {fileID: 6541174069804181549}
   - component: {fileID: 1627608755030831168}
+  - component: {fileID: 317933148325056165}
   m_Layer: 7
   m_Name: Robot Flamer
   m_TagString: Untagged
@@ -243,5 +244,28 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &317933148325056165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6203277143523611776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df0d397add07304283fbc24b1e5b5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  CurrentHealth: 0
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDied:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthReset:
     m_PersistentCalls:
       m_Calls: []

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1745175017395863483}
   - component: {fileID: 4514780368218125681}
   - component: {fileID: 7426025204878563803}
+  - component: {fileID: 3215979275487840268}
   m_Layer: 7
   m_Name: Robot Icer
   m_TagString: Untagged
@@ -147,6 +148,29 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3215979275487840268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3415973926742828242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df0d397add07304283fbc24b1e5b5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  CurrentHealth: 0
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDied:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthReset:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5672283341864908847

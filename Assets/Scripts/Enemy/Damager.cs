@@ -4,18 +4,21 @@ using UnityEngine.Events;
 
 public class Damager : MonoBehaviour
 {
-    [SerializeField] public float Damage;
+    [SerializeField] public int Damage;
     [SerializeField] public string ObjectTag = GameTags.Player;
 
     [SerializeField] public UnityEvent<GameObject> OnObjectHitted;
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag.Contains(ObjectTag))
+        var healthComponent = other.GetComponentInParent<Health>();
+        if (null != healthComponent)
         {
-            // TODO:
+            healthComponent.TakeDamage(Damage);
 
             OnObjectHitted.Invoke(other.gameObject);
+
+            Destroy(gameObject, 1);
         }
     }
 }

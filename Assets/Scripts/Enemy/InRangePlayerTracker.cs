@@ -12,15 +12,12 @@ public class InRangePlayerTracker : MonoBehaviour
     
     [SerializeField] private UnityEvent<GameObject> OnPlayerEntered;
     [SerializeField] private UnityEvent<GameObject> OnPlayerExited;
-
-
-    [SerializeField] string PlayerTag = GameTags.Player;
     
     public List<GameObject> InRangePlayers = new List<GameObject>();
 
     public void OnTriggerEnter(Collider other)
     {
-        var isPlayer = other.gameObject.CompareTag(PlayerTag);
+        var isPlayer = other.GetComponentInParent<Robot>();
         if (isPlayer && !InRangePlayers.Any(p => p.gameObject == other.gameObject))
         {
             InRangePlayers.Add(other.gameObject);
@@ -32,7 +29,7 @@ public class InRangePlayerTracker : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        var isPlayer = other.gameObject.CompareTag(PlayerTag);
+        var isPlayer = other.GetComponentInParent<Robot>();
         if (isPlayer && InRangePlayers.Any(p => p.gameObject == other.gameObject))
         {
             InRangePlayers.Remove(other.gameObject);

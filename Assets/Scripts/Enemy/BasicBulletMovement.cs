@@ -1,21 +1,23 @@
-using UnityEngine;
+using DG.Tweening;
+using System;
 
 public class BasicBulletMovement : BulletMovement
 {
+    private DG.Tweening.Core.TweenerCore<UnityEngine.Vector3, UnityEngine.Vector3, DG.Tweening.Plugins.Options.VectorOptions> tweener;
+
     protected override void Shooted()
     {
-        // throw new System.NotImplementedException();
+        var duration = (_target.transform.position - transform.position) / _initSpeed;
+        tweener = transform.DOMove(_target.transform.position, duration.magnitude).OnComplete(pathCompleted);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void pathCompleted()
     {
-        
+        Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDestroy()
     {
-        
+        tweener.Complete();
     }
 }

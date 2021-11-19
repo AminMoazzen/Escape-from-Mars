@@ -2,9 +2,9 @@ using UnityEngine;
 
 public abstract class BulletMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject _target;
-    [SerializeField] private Vector3 _initDirection;
-    [SerializeField] private float _initSpeed;
+    [SerializeField] protected GameObject _target;
+    [SerializeField] protected Vector3 _initDirection;
+    [SerializeField] protected float _initSpeed;
 
     public void Init(GameObject target, Vector3 initDirection, float initSpeed)
     {

@@ -7,13 +7,13 @@ public class Shooter : MonoBehaviour
     [SerializeField] public GameObject BulletPrefab;
     [SerializeField] public GameObject BulletInitLocator;
 
-
-    [SerializeField] public float RetargetInterval;
-    [SerializeField] public float ShootInterval;
-    [SerializeField] public float ShootInitSpeed;
+    [Range(0, 10)] [SerializeField] public float RetargetInterval;
+    [Range(0, 10)] [SerializeField] public float ShootInterval;
+    [Range(0, 10)] [SerializeField] public float ShootInitSpeed;
+    [SerializeField] public bool ShootAfterTargeting = true;
 
     [SerializeField] private UnityEvent<GameObject> OnTargetChanged;
-    [SerializeField] private UnityEvent<GameObject> OnShot;
+    [SerializeField] private UnityEvent<GameObject> OnShoted;
 
     private InRangePlayerTracker _inRangePlayerTracker;
     private GameObject _target;
@@ -37,21 +37,21 @@ public class Shooter : MonoBehaviour
         {
             Retarget();
 
-            _nextRetargetingTickTime += RetargetInterval;
+            _nextRetargetingTickTime = Time.time + RetargetInterval;
         }
 
         if (null != _target && Time.time >= _nextShootingTickTime)
         {
             Shoot();
 
-            _nextShootingTickTime += RetargetInterval;
+            _nextShootingTickTime = Time.time + ShootInterval;
         }
     }
 
     public void Retarget()
     {
         GameObject target = null;
-        if (_inRangePlayerTracker.InRangePlayers.Any())
+        if (_inRangePlayerTracker.InRangePlayers.Any(p => p.GetComponentInParent<Health>()))
         {
             target = _inRangePlayerTracker.GetNearest();
         }
@@ -63,15 +63,23 @@ public class Shooter : MonoBehaviour
 
         _target = target;
 
+        if (ShootAfterTargeting)
+        {
+            Shoot();
+        }
+
         OnTargetChanged.Invoke(_target);
     }
 
     public void Shoot()
     {
-        var bullet = Instantiate(BulletPrefab, BulletInitLocator.transform.position, BulletInitLocator.transform.rotation);
-        var bulletMovement = bullet.GetComponent<BulletMovement>();
-        bulletMovement.Init(_target, BulletInitLocator.transform.forward, ShootInitSpeed);
+        if (null != _target)
+        {
+            var bullet = Instantiate(BulletPrefab, BulletInitLocator.transform.position, BulletInitLocator.transform.rotation);
+            var bulletMovement = bullet.GetComponent<BulletMovement>();
+            bulletMovement.Init(_target, BulletInitLocator.transform.forward, ShootInitSpeed);
 
-        OnShot.Invoke(bullet);
+            OnShoted.Invoke(bullet);
+        }
     }
 }
