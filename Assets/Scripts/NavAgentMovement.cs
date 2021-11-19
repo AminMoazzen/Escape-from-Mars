@@ -49,21 +49,6 @@ public class NavAgentMovement : MonoBehaviour
         position.Value = transform.position;
     }
 
-    private void Start()
-    {
-        Activate();
-    }
-
-    //private void OnEnable()
-    //{
-    //    StartAcceptingInput();
-    //}
-
-    //private void OnDisable()
-    //{
-    //    StopAcceptingInput();
-    //}
-
     public void StartAcceptingInput()
     {
         if (_move == null)
@@ -76,10 +61,13 @@ public class NavAgentMovement : MonoBehaviour
 
     public void StopAcceptingInput()
     {
-        _move.Disable();
-        _move.started -= Move;
-        _move.canceled -= Move;
-        _move.performed -= Move;
+        if (_move != null)
+        {
+            //_move.Disable();
+            _move.started -= Move;
+            _move.canceled -= Move;
+            _move.performed -= Move;
+        }
     }
 
     public void Activate()

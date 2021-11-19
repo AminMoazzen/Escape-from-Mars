@@ -36,6 +36,30 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Switch to Oiler",
+                    "type": "Button",
+                    "id": "09b8a0ec-23bf-4ee7-a2e4-f229977dd22a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Switch to Flamer",
+                    "type": "Button",
+                    "id": "b0a94f0d-333c-4b97-9f50-2a65ef0fa5a5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Switch to Icer",
+                    "type": "Button",
+                    "id": "931a7cde-11c9-4b59-b23a-bd4afbbfb669",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -267,6 +291,39 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62c0c973-f883-42fd-a5ec-8266b5d73212",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Switch to Oiler",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4118c67-2fb6-493b-a56d-89589f1501ed",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Switch to Flamer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a17ad9e-f083-4e18-8821-a9d1f6e1cda4",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Switch to Icer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

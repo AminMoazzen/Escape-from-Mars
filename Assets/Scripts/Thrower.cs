@@ -11,6 +11,10 @@ public class Thrower : MonoBehaviour
     [Header("Design Parameters")]
     [SerializeField] private BoolReference freeAiming;
 
+    [Range(0, 2)] [SerializeField] private float range = 1;
+    [Range(0, 10)] [SerializeField] private float speed = 5;
+    [Range(0, 20)] [SerializeField] private float rate = 10;
+
     [SerializeField] private LayerMask aimable;
 
     [Header("References (Required)")]
@@ -37,6 +41,9 @@ public class Thrower : MonoBehaviour
     private Vector3 _direction;
     private bool _isActive;
     private bool _isThrowing;
+    private float _flyTime;
+    private float _instantiateInterval;
+    private Coroutine _throwing;
 
     private void Awake()
     {
@@ -63,7 +70,8 @@ public class Thrower : MonoBehaviour
 
     private void Start()
     {
-        Activate();
+        _flyTime = range / speed;
+        _instantiateInterval = 1 / rate;
     }
 
     public void StartAcceptingInput()
@@ -88,18 +96,21 @@ public class Thrower : MonoBehaviour
 
     public void StopAcceptingInput()
     {
-        if (freeAiming.Value)
+        if (freeAiming.Value && _aim != null)
         {
-            _aim.Disable();
+            //_aim.Disable();
             _aim.started -= Aim;
             _aim.canceled -= Aim;
             _aim.performed -= Aim;
         }
 
-        _fire.Disable();
-        _fire.started += Fire;
-        _fire.canceled += Fire;
-        _fire.performed += Fire;
+        if (_fire != null)
+        {
+            //_fire.Disable();
+            _fire.started -= Fire;
+            _fire.canceled -= Fire;
+            _fire.performed -= Fire;
+        }
     }
 
     public void Activate()
@@ -119,21 +130,27 @@ public class Thrower : MonoBehaviour
     public void StartThrowing()
     {
         _isThrowing = true;
+        if (_throwing == null)
+            _throwing = StartCoroutine(Throwing());
         onStartThrowing.Invoke();
     }
 
     public void StopThrowing()
     {
         _isThrowing = false;
+        if (_throwing != null)
+            StopCoroutine(_throwing);
+        _throwing = null;
         onStopThrowing.Invoke();
     }
 
-    private void Update()
+    private IEnumerator Throwing()
     {
-        if (_isActive && _isThrowing)
+        while (true)
         {
             GameObject go = Instantiate(objectToThrow, transform.position, Quaternion.identity);
-            go.transform.DOMove(transform.position + _direction * 5, 1f);
+            go.transform.DOMove(transform.position + _direction * range, _flyTime);
+            yield return new WaitForSeconds(_instantiateInterval);
         }
     }
 
