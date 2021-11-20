@@ -20,7 +20,7 @@ public class Thrower : MonoBehaviour
     [Header("References (Required)")]
     [SerializeField] private InputActionAsset inputAction;
 
-    [SerializeField] private GameObject objectToThrow;
+    [SerializeField] private Drop drop;
 
     [Header("Actions (Optional)")]
     [SerializeField] private GameEvent[] activateOn;
@@ -159,8 +159,10 @@ public class Thrower : MonoBehaviour
     {
         while (true)
         {
-            GameObject go = Instantiate(objectToThrow, transform.position, Quaternion.identity);
-            go.transform.DOMove(transform.position + _direction * range, _flyTime);
+            GameObject go = Instantiate(drop.gameObject, transform.position, Quaternion.identity);
+            Vector3 destination = transform.position + _direction * range;
+            destination.y = 0;
+            go.transform.DOMove(destination, _flyTime).onComplete += () => { go.GetComponent<Drop>().OnHitGround(); };
             yield return new WaitForSeconds(_instantiateInterval);
         }
     }

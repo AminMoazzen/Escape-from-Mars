@@ -158,7 +158,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 119
   inputAction: {fileID: -944628639613478452, guid: f9310fcbfa6d2cb419e804539ccbb6a8, type: 3}
-  objectToThrow: {fileID: 0}
+  drop: {fileID: 2453516629981900567, guid: b44c1776ab56de4449f39a4c5ecfdac2, type: 3}
   activateOn: []
   deactivateOn: []
   startThrowingOn: []
