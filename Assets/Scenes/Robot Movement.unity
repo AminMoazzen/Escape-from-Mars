@@ -730,26 +730,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Oiler
       objectReference: {fileID: 0}
-    - target: {fileID: 1874401892830460271, guid: f32af3a24f2876e498de72572cea345b, type: 3}
-      propertyPath: drop
-      value: 
-      objectReference: {fileID: 2604916554101441643, guid: f4674d06b4b2eb842be701092994255c, type: 3}
-    - target: {fileID: 1874401892830460271, guid: f32af3a24f2876e498de72572cea345b, type: 3}
-      propertyPath: objectToThrow
-      value: 
-      objectReference: {fileID: 201965996}
-    - target: {fileID: 1874401892830460271, guid: f32af3a24f2876e498de72572cea345b, type: 3}
-      propertyPath: splashes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1874401892830460271, guid: f32af3a24f2876e498de72572cea345b, type: 3}
-      propertyPath: splashes.Array.data[0]
-      value: 
-      objectReference: {fileID: 5353255701649638387, guid: 066ac960f7d707b4b82a46218b8bd960, type: 3}
-    - target: {fileID: 1874401892830460271, guid: f32af3a24f2876e498de72572cea345b, type: 3}
-      propertyPath: splashes.Array.data[1]
-      value: 
-      objectReference: {fileID: 5283589872002772202, guid: a2b318147d92748478ae99e6036d346f, type: 3}
     - target: {fileID: 1896163901843015668, guid: f32af3a24f2876e498de72572cea345b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -828,14 +808,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Icer
       objectReference: {fileID: 0}
-    - target: {fileID: 4514780368218125681, guid: 68400e702330d6048886211d0ca4867e, type: 3}
-      propertyPath: drop
-      value: 
-      objectReference: {fileID: 2453516629981900567, guid: b44c1776ab56de4449f39a4c5ecfdac2, type: 3}
-    - target: {fileID: 4514780368218125681, guid: 68400e702330d6048886211d0ca4867e, type: 3}
-      propertyPath: objectToThrow
-      value: 
-      objectReference: {fileID: 201965996}
     - target: {fileID: 8891027083042385287, guid: 68400e702330d6048886211d0ca4867e, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -897,22 +869,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Flamer
       objectReference: {fileID: 0}
-    - target: {fileID: 6541174069804181549, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
-      propertyPath: drop
-      value: 
-      objectReference: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
-    - target: {fileID: 6541174069804181549, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
-      propertyPath: objectToThrow
-      value: 
-      objectReference: {fileID: 5405101884962245478, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
-    - target: {fileID: 6541174069804181549, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
-      propertyPath: splashes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6541174069804181549, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
-      propertyPath: splashes.Array.data[0]
-      value: 
-      objectReference: {fileID: 5405101884962245478, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
     - target: {fileID: 6789878562350918257, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
       propertyPath: m_RootOrder
       value: 6
