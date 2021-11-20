@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6478340569636617245}
   - component: {fileID: 6478340569636617234}
   - component: {fileID: 9036316433224442733}
+  - component: {fileID: 4099551950261820952}
   m_Layer: 0
   m_Name: Fire Drop
   m_TagString: Untagged
@@ -65,6 +66,12 @@ MonoBehaviour:
   onHit:
     m_PersistentCalls:
       m_Calls: []
+  OnExitedFromDrop:
+    m_PersistentCalls:
+      m_Calls: []
+  onReachGround:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6478340569636617234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +100,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onEnterToDrop:
+    m_PersistentCalls:
+      m_Calls: []
+  onExitFromDrop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &9036316433224442733
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -109,6 +122,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4099551950261820952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478340569636617235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b53ce756eb58924b9714a8e06d577ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnObjectHitted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectInDamageRange:
+    m_PersistentCalls:
+      m_Calls: []
+  Damage: 10
+  objectLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  _objectOnAttack: {fileID: 0}
+  _lastDamageTime: 0
 --- !u!1001 &6478340570645374875
 PrefabInstance:
   m_ObjectHideFlags: 0
