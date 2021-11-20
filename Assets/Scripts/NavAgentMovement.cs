@@ -109,7 +109,7 @@ public class NavAgentMovement : MonoBehaviour
             if (_direction.x > 0) { _scaleFactor = 1; }
             else if (_direction.x < 0) { _scaleFactor = -1; }
 
-            transform.localScale = new Vector3(_scaleFactor, 1, 1);
+            animator.transform.localScale = new Vector3(_scaleFactor, 1, 1);
         }
     }
 
