@@ -1,23 +1,33 @@
-using DG.Tweening;
-using System;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class BasicBulletMovement : BulletMovement
 {
-    private DG.Tweening.Core.TweenerCore<UnityEngine.Vector3, UnityEngine.Vector3, DG.Tweening.Plugins.Options.VectorOptions> tweener;
+    [SerializeField] public UnityEvent<Vector3> OnBulletDistroied;
+
+    [Range(0, 60)][SerializeField] public float LifeTime = 5;
+    [SerializeField] private bool _shooted = true;
 
     protected override void Shooted()
     {
-        var duration = (_target.transform.position - transform.position) / _initSpeed;
-        tweener = transform.DOMove(_target.transform.position, duration.magnitude).OnComplete(pathCompleted);
-    }
-
-    private void pathCompleted()
-    {
-        Destroy(gameObject);
+        _shooted = true;
     }
 
     public void OnDestroy()
     {
-        tweener.Complete();
+        OnBulletDistroied.Invoke(transform.position);
+    }
+
+    public void Update()
+    {
+        if(_shooted)
+        {
+            transform.position += _initDirection * _initSpeed * Time.deltaTime;
+            LifeTime -= Time.deltaTime;
+            if(LifeTime <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }
