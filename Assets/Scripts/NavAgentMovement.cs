@@ -17,8 +17,8 @@ public class NavAgentMovement : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
 
     [SerializeField] private InputActionAsset inputAction;
-
     [SerializeField] private Vector3Reference position;
+    [SerializeField] private Animator animator;
 
     [Header("Actions (Optional)")]
     [SerializeField] private GameEvent[] activateOn;
@@ -30,9 +30,12 @@ public class NavAgentMovement : MonoBehaviour
 
     [SerializeField] private UnityEvent onDeactivate;
 
+    private readonly int IsRunningID = Animator.StringToHash("IsRunning");
+
     private InputAction _move;
     private Vector3 _direction;
     private bool _isActive;
+    private float _scaleFactor = 1;
 
     private void Awake()
     {
@@ -47,6 +50,16 @@ public class NavAgentMovement : MonoBehaviour
         }
 
         position.Value = transform.position;
+    }
+
+    private void OnEnable()
+    {
+        StartAcceptingInput();
+    }
+
+    private void OnDisable()
+    {
+        StopAcceptingInput();
     }
 
     public void StartAcceptingInput()
@@ -73,14 +86,14 @@ public class NavAgentMovement : MonoBehaviour
     public void Activate()
     {
         _isActive = true;
-        StartAcceptingInput();
+        //StartAcceptingInput();
         onActivate.Invoke();
     }
 
     public void Deactivate()
     {
         _isActive = false;
-        StopAcceptingInput();
+        //StopAcceptingInput();
         onDeactivate.Invoke();
     }
 
@@ -90,6 +103,13 @@ public class NavAgentMovement : MonoBehaviour
         {
             agent.Move(_direction * (speed.Value * Time.deltaTime));
             position.Value = transform.position;
+
+            animator.SetBool(IsRunningID, _direction.x != 0);
+
+            if (_direction.x > 0) { _scaleFactor = 1; }
+            else if (_direction.x < 0) { _scaleFactor = -1; }
+
+            transform.localScale = new Vector3(_scaleFactor, 1, 1);
         }
     }
 

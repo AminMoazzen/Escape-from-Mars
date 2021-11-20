@@ -1,0 +1,89 @@
+Oil Bot.png
+size:2048,1024
+filter:Linear,Linear
+pma:true
+Arm R
+bounds:1341,35,159,166
+Body Fire
+bounds:230,559,340,458
+Body Ice
+bounds:230,99,340,458
+Body Oil
+bounds:778,559,340,458
+Eye
+bounds:1081,240,51,60
+Eye BG
+bounds:958,127,105,132
+rotate:90
+Fire Shooter
+bounds:935,302,255,218
+rotate:90
+Glasses
+bounds:1327,587,173,207
+Hand L
+bounds:778,19,213,93
+Hand R
+bounds:778,19,213,93
+Holder 1
+bounds:230,11,272,86
+Holder 2
+bounds:572,114,272,85
+Holder 3
+bounds:504,11,272,86
+Ice Shooter
+bounds:754,208,349,179
+rotate:90
+Leg L
+bounds:572,201,402,180
+offsets:0,4,402,184
+rotate:90
+Leg R
+bounds:572,605,412,186
+offsets:0,4,412,190
+rotate:90
+Pipe 1
+bounds:1120,569,225,205
+offsets:0,0,289,205
+rotate:90
+Pipe 2
+bounds:935,234,66,144
+rotate:90
+Pipe 3
+bounds:846,117,110,89
+Shadow
+bounds:2,23,994,226
+rotate:90
+Wheel Back LD
+bounds:1118,17,221,221
+Wheel Back RD
+bounds:1118,17,221,221
+Wheel Back LU
+bounds:1343,848,169,169
+Wheel Back RU
+bounds:1343,848,169,169
+Wheel Inside LD
+bounds:1502,40,161,161
+Wheel Inside RD
+bounds:1502,40,161,161
+Wheel Inside LU
+bounds:993,2,123,123
+Wheel Inside RU
+bounds:993,2,123,123
+Wheel Outside LD
+bounds:1120,796,221,221
+Wheel Outside RD
+bounds:1120,796,221,221
+Wheel Outside LU
+bounds:1341,203,169,169
+Wheel Outside RU
+bounds:1341,203,169,169
+Wheel Ring LD
+bounds:1155,374,193,192
+rotate:90
+Wheel Ring RD
+bounds:1155,374,193,192
+rotate:90
+Wheel Ring LU
+bounds:1349,438,147,147
+Wheel Ring RU
+bounds:1349,438,147,147

@@ -13,9 +13,7 @@ public class BotSwitcher : MonoBehaviour
 
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
 
-    [SerializeField] private Robot oiler;
-    [SerializeField] private Robot flamer;
-    [SerializeField] private Robot icer;
+    [SerializeField] private Robot[] bots;
 
     [Header("Actions (Optional)")]
     [SerializeField] private IntGameEvent[] switchOn;
@@ -60,31 +58,21 @@ public class BotSwitcher : MonoBehaviour
 
     public void SwitchTo(int botIndex)
     {
-        switch (botIndex)
+        if (botIndex < bots.Length)
         {
-            case 0:
-                oiler.Activate();
-                flamer.Deactivate();
-                icer.Deactivate();
-                virtualCamera.Follow = oiler.transform;
-                break;
+            for (int i = 0; i < bots.Length; i++)
+            {
+                if (i == botIndex)
+                {
+                    bots[i].Activate();
+                    virtualCamera.Follow = bots[i].transform;
+                }
+                else
+                    bots[i].Deactivate();
+            }
 
-            case 1:
-                oiler.Deactivate();
-                flamer.Activate();
-                icer.Deactivate();
-                virtualCamera.Follow = flamer.transform;
-                break;
-
-            case 2:
-                oiler.Deactivate();
-                flamer.Deactivate();
-                icer.Activate();
-                virtualCamera.Follow = icer.transform;
-                break;
+            onSwitch.Invoke(botIndex);
         }
-
-        onSwitch.Invoke(botIndex);
     }
 
     private void SwitchToOiler(InputAction.CallbackContext context)
