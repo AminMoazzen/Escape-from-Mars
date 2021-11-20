@@ -74,6 +74,16 @@ public class Thrower : MonoBehaviour
         _instantiateInterval = 1 / rate;
     }
 
+    private void OnEnable()
+    {
+        StartAcceptingInput();
+    }
+
+    private void OnDisable()
+    {
+        StopAcceptingInput();
+    }
+
     public void StartAcceptingInput()
     {
         if (freeAiming.Value)
@@ -116,32 +126,36 @@ public class Thrower : MonoBehaviour
     public void Activate()
     {
         _isActive = true;
-        StartAcceptingInput();
+        //StartAcceptingInput();
         onActivate.Invoke();
     }
 
     public void Deactivate()
     {
         _isActive = false;
-        StopAcceptingInput();
+        //StopAcceptingInput();
         onDeactivate.Invoke();
     }
 
     public void StartThrowing()
     {
-        _isThrowing = true;
         if (_throwing == null)
+        {
+            _isThrowing = true;
             _throwing = StartCoroutine(Throwing());
-        onStartThrowing.Invoke();
+            onStartThrowing.Invoke();
+        }
     }
 
     public void StopThrowing()
     {
-        _isThrowing = false;
         if (_throwing != null)
+        {
+            _isThrowing = false;
             StopCoroutine(_throwing);
-        _throwing = null;
-        onStopThrowing.Invoke();
+            _throwing = null;
+            onStopThrowing.Invoke();
+        }
     }
 
     private IEnumerator Throwing()
@@ -156,24 +170,30 @@ public class Thrower : MonoBehaviour
 
     private void Aim(InputAction.CallbackContext context)
     {
-        Vector2 input = context.ReadValue<Vector2>();
-
-        RaycastHit hitInfo;
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(input), out hitInfo, 20, aimable))
+        if (_isActive)
         {
-            Transform thisTransform = transform;
-            Vector3 positionInWorld = new Vector3(hitInfo.point.x, thisTransform.position.y, hitInfo.point.z);
-            _direction = (positionInWorld - thisTransform.position).normalized;
+            Vector2 input = context.ReadValue<Vector2>();
+
+            RaycastHit hitInfo;
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(input), out hitInfo, 20, aimable))
+            {
+                Transform thisTransform = transform;
+                Vector3 positionInWorld = new Vector3(hitInfo.point.x, thisTransform.position.y, hitInfo.point.z);
+                _direction = (positionInWorld - thisTransform.position).normalized;
+            }
         }
     }
 
     private void Fire(InputAction.CallbackContext context)
     {
-        bool isPress = context.ReadValue<float>() > 0;
+        if (_isActive)
+        {
+            bool isPress = context.ReadValue<float>() > 0;
 
-        if (isPress)
-            StartThrowing();
-        else
-            StopThrowing();
+            if (isPress)
+                StartThrowing();
+            else
+                StopThrowing();
+        }
     }
 }

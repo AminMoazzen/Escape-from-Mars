@@ -49,6 +49,16 @@ public class NavAgentMovement : MonoBehaviour
         position.Value = transform.position;
     }
 
+    private void OnEnable()
+    {
+        StartAcceptingInput();
+    }
+
+    private void OnDisable()
+    {
+        StopAcceptingInput();
+    }
+
     public void StartAcceptingInput()
     {
         if (_move == null)
@@ -73,14 +83,14 @@ public class NavAgentMovement : MonoBehaviour
     public void Activate()
     {
         _isActive = true;
-        StartAcceptingInput();
+        //StartAcceptingInput();
         onActivate.Invoke();
     }
 
     public void Deactivate()
     {
         _isActive = false;
-        StopAcceptingInput();
+        //StopAcceptingInput();
         onDeactivate.Invoke();
     }
 
