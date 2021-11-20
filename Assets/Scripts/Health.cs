@@ -3,11 +3,13 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
+
     [SerializeField] public float MaxHealth = 100;
     [SerializeField] public float CurrentHealth;
 
     [SerializeField] public UnityEvent<Health, float> OnDamaged;
     [SerializeField] public UnityEvent<Health, float> OnHealthChangedNormalized;
+
     [SerializeField] public UnityEvent<GameObject> OnDied;
     [SerializeField] public UnityEvent<GameObject> OnHealthReset;    
 
@@ -16,7 +18,9 @@ public class Health : MonoBehaviour
         CurrentHealth = MaxHealth;
     }
 
+
     public void TakeDamage(float amount)
+
     {
         CurrentHealth -= amount;
 
@@ -32,6 +36,7 @@ public class Health : MonoBehaviour
         }
 
         OnHealthChangedNormalized.Invoke(this, CurrentHealth/MaxHealth);
+
     }
 
     public void ResetHealth()
