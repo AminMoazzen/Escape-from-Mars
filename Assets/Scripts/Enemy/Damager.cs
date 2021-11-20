@@ -8,7 +8,7 @@ public class Damager : MonoBehaviour
     [SerializeField] public UnityEvent<GameObject> OnObjectInDamageRange;
 
 
-    [SerializeField] public int Damage = 10;
+    [SerializeField] public float Damage = 10;
     [SerializeField] public string ObjectTag = GameTags.Player;
 
     [SerializeField] private GameObject _objectOnAttack;
