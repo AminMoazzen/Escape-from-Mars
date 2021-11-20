@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9162844749464626938}
   - component: {fileID: 9162844749464626933}
   - component: {fileID: 4092130850548953367}
-  - component: {fileID: 3342782378002398717}
+  - component: {fileID: 2493809870802132284}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -112,7 +112,13 @@ MonoBehaviour:
   _target: {fileID: 0}
   _initDirection: {x: 0, y: 0, z: 0}
   _initSpeed: 0
---- !u!114 &3342782378002398717
+  _bullet: {fileID: 0}
+  OnBulletDistroied:
+    m_PersistentCalls:
+      m_Calls: []
+  LifeTime: 5
+  _shooted: 1
+--- !u!114 &2493809870802132284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,11 +127,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9162844749464626932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ec5a6d5b0729c498c0bddf30577b38, type: 3}
+  m_Script: {fileID: 11500000, guid: a494ca57290a95b418f3724fd7bd638d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
-  ObjectTag: Player
   OnObjectHitted:
     m_PersistentCalls:
       m_Calls: []
+  Damage: 10
+  ObjectTag: Player

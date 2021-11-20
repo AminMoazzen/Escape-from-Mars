@@ -77,7 +77,8 @@ public class Shooter : MonoBehaviour
         {
             var bullet = Instantiate(BulletPrefab, BulletInitLocator.transform.position, BulletInitLocator.transform.rotation);
             var bulletMovement = bullet.GetComponent<BulletMovement>();
-            bulletMovement.Init(_target, BulletInitLocator.transform.forward, ShootInitSpeed);
+
+            bulletMovement.Init(_target, _target.transform.position - BulletInitLocator.transform.position, ShootInitSpeed);
 
             OnShoted.Invoke(bullet);
         }
