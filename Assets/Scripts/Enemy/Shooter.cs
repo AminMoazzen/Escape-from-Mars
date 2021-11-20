@@ -35,21 +35,19 @@ public class Shooter : MonoBehaviour
     {
         if (Time.time >= _nextRetargetingTickTime)
         {
-            Retarget();
-
-            _nextRetargetingTickTime = Time.time + RetargetInterval;
+            Retarget();            
         }
 
         if (null != _target && Time.time >= _nextShootingTickTime)
         {
             Shoot();
-
-            _nextShootingTickTime = Time.time + ShootInterval;
         }
     }
 
     public void Retarget()
     {
+        _nextRetargetingTickTime = Time.time + RetargetInterval;
+
         GameObject target = null;
         if (_inRangePlayerTracker.InRangePlayers.Any(p => p.GetComponentInParent<Health>()))
         {
@@ -73,6 +71,8 @@ public class Shooter : MonoBehaviour
 
     public void Shoot()
     {
+        _nextShootingTickTime = Time.time + ShootInterval;
+
         if (null != _target)
         {
             var bullet = Instantiate(BulletPrefab, BulletInitLocator.transform.position, BulletInitLocator.transform.rotation);
