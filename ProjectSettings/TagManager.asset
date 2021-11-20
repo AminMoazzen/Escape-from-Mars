@@ -50,6 +50,9 @@ TagManager:
   - name: Gameplay
     uniqueID: 1883632431
     locked: 0
+  - name: DecorationFront
+    uniqueID: 2686239623
+    locked: 0
   - name: Foreground
     uniqueID: 485148501
     locked: 0
