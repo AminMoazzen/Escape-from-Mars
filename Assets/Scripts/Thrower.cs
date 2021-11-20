@@ -40,7 +40,6 @@ public class Thrower : MonoBehaviour
     private InputAction _fire;
     private Vector3 _direction;
     private bool _isActive;
-    private bool _isThrowing;
     private float _flyTime;
     private float _instantiateInterval;
     private Coroutine _throwing;
@@ -141,7 +140,6 @@ public class Thrower : MonoBehaviour
     {
         if (_throwing == null)
         {
-            _isThrowing = true;
             _throwing = StartCoroutine(Throwing());
             onStartThrowing.Invoke();
         }
@@ -151,7 +149,6 @@ public class Thrower : MonoBehaviour
     {
         if (_throwing != null)
         {
-            _isThrowing = false;
             StopCoroutine(_throwing);
             _throwing = null;
             onStopThrowing.Invoke();
