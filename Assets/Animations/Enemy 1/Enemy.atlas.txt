@@ -1,0 +1,49 @@
+Enemy.png
+size:2048,512
+filter:Linear,Linear
+pma:true
+Body 1
+bounds:590,158,352,586
+rotate:90
+Body 2
+bounds:2,92,418,586
+rotate:90
+GUN
+bounds:1178,171,219,157
+Leg Back L
+bounds:1601,213,115,209
+rotate:90
+Leg Back L2
+bounds:2,5,112,85
+Leg Back R
+bounds:1399,196,132,200
+rotate:90
+Leg Back R2
+bounds:116,6,112,84
+offsets:0,0,112,85
+Leg Front L
+bounds:590,36,120,248
+rotate:90
+Leg Front L2
+bounds:329,22,68,99
+rotate:90
+Leg Front R
+bounds:1090,40,116,249
+rotate:90
+Leg Front R2
+bounds:230,16,74,97
+offsets:1,0,75,97
+rotate:90
+Red Leg Back L
+bounds:1794,2,115,209
+Red Leg Back R
+bounds:1592,62,132,200
+rotate:90
+Red Leg Fron L
+bounds:840,36,120,248
+rotate:90
+Red Leg Fron R
+bounds:1341,53,116,249
+rotate:90
+Shadow
+bounds:1178,330,789,180
