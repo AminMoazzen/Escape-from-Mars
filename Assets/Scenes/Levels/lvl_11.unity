@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: e559f0fda47df3947806b5eb655e7452, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d87fe9af078ee494fa06ce99b1bbcff8, type: 2}
 --- !u!1001 &5254447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -633,7 +633,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &492055931
 PrefabInstance:
@@ -2086,7 +2086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373248406313550264, guid: ea2ce2d551fd039408058c525d070223, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2373248406313550264, guid: ea2ce2d551fd039408058c525d070223, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2853,7 +2853,7 @@ Transform:
   - {fileID: 727639765}
   - {fileID: 100473210}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1611143404
 PrefabInstance:
