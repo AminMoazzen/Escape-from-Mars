@@ -2490,7 +2490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &874404081
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4948,7 +4948,7 @@ Transform:
   - {fileID: 1094423530}
   - {fileID: 1718772727}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1628466774
 GameObject:
