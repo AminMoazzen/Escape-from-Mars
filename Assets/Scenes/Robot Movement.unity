@@ -773,10 +773,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Oiler
       objectReference: {fileID: 0}
-    - target: {fileID: 1896163901843015668, guid: f32af3a24f2876e498de72572cea345b, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f32af3a24f2876e498de72572cea345b, type: 3}
 --- !u!1001 &2373248404406285763
@@ -1015,10 +1011,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1667737016912201614, guid: 68400e702330d6048886211d0ca4867e, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3415973926742828242, guid: 68400e702330d6048886211d0ca4867e, type: 3}
       propertyPath: m_Name
       value: Robot Icer
@@ -1076,10 +1068,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1114825403161531336, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6203277143523611776, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
       propertyPath: m_Name
       value: Robot Flamer
