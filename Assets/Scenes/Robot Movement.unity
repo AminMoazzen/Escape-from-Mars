@@ -123,70 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: f6f775ef426cd224db04ffc1165b86df, type: 2}
---- !u!1 &141130091
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 141130094}
-  - component: {fileID: 141130093}
-  - component: {fileID: 141130092}
-  m_Layer: 0
-  m_Name: Rendezvous
-  m_TagString: Untagged
-  m_Icon: {fileID: 2800000, guid: 41edf25d451a744e6ad1172a677603bd, type: 3}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &141130092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141130091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1eab50bf7036341b340486e0a9825d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minBots: 3
-  onBotArrived:
-    m_PersistentCalls:
-      m_Calls: []
-  onLastBotArrived:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!135 &141130093
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141130091}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &141130094
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141130091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17, y: 0, z: 17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &264226501
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Oiler
       objectReference: {fileID: 0}
+    - target: {fileID: 1896163901843015668, guid: f32af3a24f2876e498de72572cea345b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f32af3a24f2876e498de72572cea345b, type: 3}
 --- !u!1001 &2373248404406285763
@@ -1004,6 +944,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea2ce2d551fd039408058c525d070223, type: 3}
+--- !u!1001 &3695341289043611277
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.468
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749347, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695341288907749350, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
+      propertyPath: m_Name
+      value: Rendezvous
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5c8f3a700f0005740900881ed4456496, type: 3}
 --- !u!1001 &8622300979017709022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1011,6 +1008,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1667737016912201614, guid: 68400e702330d6048886211d0ca4867e, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3415973926742828242, guid: 68400e702330d6048886211d0ca4867e, type: 3}
       propertyPath: m_Name
       value: Robot Icer
@@ -1068,6 +1069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1114825403161531336, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6203277143523611776, guid: b720e5ed6095d3e42b6c957a896d826a, type: 3}
       propertyPath: m_Name
       value: Robot Flamer
