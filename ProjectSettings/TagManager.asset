@@ -15,8 +15,8 @@ TagManager:
   - Ground
   - Robot
   - Enemy
-  - 
-  - 
+  - RobotDetector
+  - Hazards
   - 
   - 
   - 
