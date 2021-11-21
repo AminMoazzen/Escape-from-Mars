@@ -106,8 +106,11 @@ MonoBehaviour:
   BulletInitLocator: {fileID: 7454302557615712639}
   RetargetInterval: 1
   ShootInterval: 2
-  ShootInitSpeed: 10
+  ShootInitSpeed: 2
   ShootAfterTargeting: 1
+  OnTargetChanged:
+    m_PersistentCalls:
+      m_Calls: []
   OnShooting:
     m_PersistentCalls:
       m_Calls:
@@ -123,9 +126,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnTargetChanged:
-    m_PersistentCalls:
-      m_Calls: []
   OnShoted:
     m_PersistentCalls:
       m_Calls:
@@ -177,6 +177,9 @@ MonoBehaviour:
   OnHealthChangedNormalized:
     m_PersistentCalls:
       m_Calls: []
+  OnHealthChangedNormalizedSimple:
+    m_PersistentCalls:
+      m_Calls: []
   OnDied:
     m_PersistentCalls:
       m_Calls:
@@ -219,8 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e6b596eb8b3e24398375d7e296d73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
-  fieldName: 
+  Animator: {fileID: 1824214381676557797}
+  fieldName: IsAttacking
   newValue: 1
 --- !u!114 &8098170057369638488
 MonoBehaviour:
@@ -234,8 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e6b596eb8b3e24398375d7e296d73a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 0}
-  fieldName: 
+  Animator: {fileID: 1824214381676557797}
+  fieldName: IsAttacking
   newValue: 0
 --- !u!1 &6997727849348272492
 GameObject:
@@ -404,7 +407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7438539587093018165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.48, z: 0.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6447221333278763630}
@@ -448,7 +451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7454302557615712639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.613, y: 0.275, z: 0.283}
+  m_LocalPosition: {x: 0, y: 0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6447221333278763630}
