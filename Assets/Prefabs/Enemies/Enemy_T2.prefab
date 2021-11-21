@@ -111,7 +111,7 @@ MonoBehaviour:
   OnTargetChanged:
     m_PersistentCalls:
       m_Calls: []
-  OnShooting:
+  OnPlayerBeingTargeted:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 358063949762708928}
@@ -126,7 +126,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnShoted:
+  OnAllPlayerExitedFromTarget:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8098170057369638488}
@@ -141,6 +141,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnShooting:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShoted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!208 &1791944525113210593
 NavMeshObstacle:
   m_ObjectHideFlags: 0

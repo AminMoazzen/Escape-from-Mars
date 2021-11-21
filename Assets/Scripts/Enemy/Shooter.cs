@@ -15,6 +15,10 @@ public class Shooter : MonoBehaviour
 
     [Header("Gameobject is new trgeted object")]
     [SerializeField] private UnityEvent<GameObject> OnTargetChanged;
+    [Header("Gameobject is new trgeted object")]
+    [SerializeField] private UnityEvent<GameObject> OnPlayerBeingTargeted;
+    [Header("last Gameobject exited from target")]
+    [SerializeField] private UnityEvent<GameObject> OnAllPlayerExitedFromTarget;
     [Header("Gameobject is shooter object")]
     [SerializeField] private UnityEvent<GameObject> OnShooting;
     [Header("Gameobject is bullet object")]
@@ -62,6 +66,18 @@ public class Shooter : MonoBehaviour
         if (_target == target)
         {
             return;
+        }
+
+        if (null == target)
+        {
+            OnAllPlayerExitedFromTarget.Invoke(_target);
+        }
+        else
+        {
+            if (null == _target)
+            {
+                OnPlayerBeingTargeted.Invoke(target);
+            }
         }
 
         _target = target;

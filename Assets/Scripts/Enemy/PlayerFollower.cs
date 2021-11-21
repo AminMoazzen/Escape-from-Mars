@@ -9,6 +9,8 @@ public class PlayerFollower : MonoBehaviour
     [SerializeField] public float RetargetInterval;
 
     [SerializeField] private UnityEvent<GameObject> OnTargetChanged;
+    [SerializeField] private UnityEvent<GameObject> OnStartedFollowPlayer;
+    [SerializeField] private UnityEvent<GameObject> OnStopedFollowPlayer;
 
     private NavMeshAgent _navMeshAgent;
     private InRangePlayerTracker _inRangePlayerTracker;
@@ -55,7 +57,19 @@ public class PlayerFollower : MonoBehaviour
         {
             return;
         }
+        else
+        {
+            if(null == target)
+            {
+                OnStopedFollowPlayer.Invoke(_target);
+            }
+            else
+            {
+                OnStartedFollowPlayer.Invoke(target);
+            }
+        }
 
+        
         _target = target;
 
         OnTargetChanged.Invoke(_target);
