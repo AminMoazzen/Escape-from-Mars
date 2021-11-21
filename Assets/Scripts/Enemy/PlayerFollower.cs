@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(InRangePlayerTracker))]
 public class PlayerFollower : MonoBehaviour
 {
@@ -18,8 +17,13 @@ public class PlayerFollower : MonoBehaviour
 
     private void Awake()
     {
-        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent = GetComponentInParent<NavMeshAgent>();
         _inRangePlayerTracker = GetComponent<InRangePlayerTracker>();
+
+        if(null == _navMeshAgent)
+        {
+            Debug.LogError($"Parent does not contain {nameof(NavMeshAgent)} component", transform.parent);
+        }
     }
 
     private void Start()
