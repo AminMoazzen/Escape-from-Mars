@@ -57,10 +57,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1eab50bf7036341b340486e0a9825d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minBots: 3
+  minBots: 1
   onBotArrived:
     m_PersistentCalls:
       m_Calls: []
   onLastBotArrived:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2c502acec5bdff845bddf067a865f97b, type: 2}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: WinLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

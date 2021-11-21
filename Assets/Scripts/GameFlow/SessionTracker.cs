@@ -5,9 +5,9 @@ public class SessionTracker : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private ProgressData progressData;
 
-    private void Start()
+    public void Begin()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         progressData.LoadProgression();
         gameManager.LoadLevel();
     }
