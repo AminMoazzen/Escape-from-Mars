@@ -4802,7 +4802,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1229897333
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 10
   m_RenderMode: 0
   m_SortMode: 0
@@ -4847,7 +4847,7 @@ MonoBehaviour:
   OnObjectInDamageRange:
     m_PersistentCalls:
       m_Calls: []
-  Damage: 1
+  Damage: 20
   objectLayers:
     serializedVersion: 2
     m_Bits: 256
