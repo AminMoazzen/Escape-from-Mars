@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2953c036c3bbfff4283215395edf0cd8, type: 3}
-  m_Name: Level 0
+  m_Name: Level 7
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: .
   _value:
-    _sceneName: Assets/Scenes/Robot Movement.unity
-    _sceneIndex: 1
+    _sceneName: Assets/Scenes/Levels/lvl_7.unity
+    _sceneIndex: 5
     _isSceneEnabled: 1
   _readOnly: 0
   _raiseWarning: 1
