@@ -133,5 +133,11 @@ MonoBehaviour:
   OnObjectHitted:
     m_PersistentCalls:
       m_Calls: []
+  OnObjectInDamageRange:
+    m_PersistentCalls:
+      m_Calls: []
   Damage: 10
-  ObjectTag: Player
+  objectLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  _objectOnAttack: {fileID: 0}

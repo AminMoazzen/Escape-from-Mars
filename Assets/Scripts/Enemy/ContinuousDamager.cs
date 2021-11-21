@@ -1,28 +1,31 @@
+using System;
 using UnityEngine;
 
 public class ContinuousDamager : Damager
 {
-    [SerializeField] public float DamageInterval;
-
     [SerializeField] private float _lastDamageTime;
 
     public void Awake()
     {
-        OnObjectInDamageRange.AddListener(OnDamageRange);
+        OnObjectHitted.AddListener(OnObjectHittedResetTimes);
+        OnObjectInDamageRange.AddListener(OnDamageContinuous);
+    }
+
+    private void OnObjectHittedResetTimes(GameObject arg0)
+    {
         _lastDamageTime = Time.time;
     }
 
-    public void OnDamageRange(GameObject hitObject)
+    public void OnDamageContinuous(GameObject hitObject)
     {
-        if (Time.time >= _lastDamageTime + DamageInterval)
+        var health = hitObject.GetComponentInParent<Health>();
+        if (null != health)
         {
-            var health = hitObject.GetComponentInParent<Health>();
-            if (null != health)
-            {
-                health.TakeDamage(Damage);
-            }
+            var damage = (Time.time - _lastDamageTime) * Damage;
 
-            _lastDamageTime = Time.time + DamageInterval;
-        }
+            health.TakeDamage(damage);
+
+            _lastDamageTime = Time.time;
+        }            
     }
 }

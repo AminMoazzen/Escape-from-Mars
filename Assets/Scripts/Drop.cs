@@ -13,6 +13,9 @@ public class Drop : MonoBehaviour
     [Header("Events (Optional)")]
     [SerializeField] private UnityEvent<GameObject> onHit;
 
+    [Header("Events (Optional)")]
+    [SerializeField] private UnityEvent<GameObject> OnExitedFromDrop;
+
     [SerializeField] private UnityEvent onReachGround;
 
     private void OnTriggerEnter(Collider other)
@@ -23,14 +26,26 @@ public class Drop : MonoBehaviour
             if (hitter && hitter.Match(type))
             {
                 hitter.Hit();
-                OnHit(other.gameObject);
+
+                hitter.EnterToDrop(gameObject);
+                
+                onHit.Invoke(other.gameObject);
             }
         }
     }
 
-    private void OnHit(GameObject hitter)
+    private void OnTriggerExit(Collider other)
     {
-        onHit.Invoke(hitter);
+        DropHitter[] hitters = other.GetComponents<DropHitter>();
+        foreach (DropHitter hitter in hitters)
+        {
+            if (hitter && hitter.Match(type))
+            {
+                hitter.ExitedFromDrop(gameObject);
+
+                OnExitedFromDrop.Invoke(other.gameObject);
+            }
+        }
     }
 
     public void Die()

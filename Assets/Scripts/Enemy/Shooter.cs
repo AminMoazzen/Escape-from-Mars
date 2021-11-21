@@ -12,7 +12,12 @@ public class Shooter : MonoBehaviour
     [Range(0, 10)] [SerializeField] public float ShootInitSpeed;
     [SerializeField] public bool ShootAfterTargeting = true;
 
+
+    [Header("Gameobject is new trgeted object")]
     [SerializeField] private UnityEvent<GameObject> OnTargetChanged;
+    [Header("Gameobject is shooter object")]
+    [SerializeField] private UnityEvent<GameObject> OnShooting;
+    [Header("Gameobject is bullet object")]
     [SerializeField] private UnityEvent<GameObject> OnShoted;
 
     private InRangePlayerTracker _inRangePlayerTracker;
@@ -75,6 +80,8 @@ public class Shooter : MonoBehaviour
 
         if (null != _target)
         {
+            OnShooting.Invoke(gameObject);
+
             var bullet = Instantiate(BulletPrefab, BulletInitLocator.transform.position, BulletInitLocator.transform.rotation);
             var bulletMovement = bullet.GetComponent<BulletMovement>();
 

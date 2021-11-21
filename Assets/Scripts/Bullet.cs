@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Bullet : Damager
+public class Bullet : InstantDamage
 {
-    public void Awake()
+    public override void Awake()
     {
+        base.Awake();
         OnObjectHitted.AddListener(OnHitObject);
     }
 

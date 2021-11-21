@@ -8,10 +8,8 @@ public class Damager : MonoBehaviour
     [SerializeField] public UnityEvent<GameObject> OnObjectInDamageRange;
 
 
-
     [SerializeField] public float Damage = 10;
-
-    [SerializeField] public string ObjectTag = GameTags.Player;
+    [SerializeField] public LayerMask objectLayers;
 
     [SerializeField] private GameObject _objectOnAttack;
 
@@ -25,30 +23,26 @@ public class Damager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        var healthComponent = other.GetComponentInParent<Health>();
-        if (null != healthComponent)
+        if (objectLayers == (objectLayers | (1 << other.gameObject.layer)))
         {
-            _objectOnAttack = other.gameObject;
+            var healthComponent = other.GetComponentInParent<Health>();
+            if (null != healthComponent)
+            {
+                _objectOnAttack = other.gameObject;
 
-            healthComponent.TakeDamage(Damage);
-
-            HitObject(other.gameObject);
+                OnObjectHitted.Invoke(_objectOnAttack);
+            }
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        if(other.gameObject == _objectOnAttack)
+        if (other.gameObject.layer == objectLayers.value)
         {
-            _objectOnAttack = null;
-        }
-    }
-
-    public void HitObject(GameObject hittedObject)
-    {
-        if (null != hittedObject)
-        {
-            OnObjectHitted.Invoke(hittedObject);
+            if (other.gameObject == _objectOnAttack)
+            {
+                _objectOnAttack = null;
+            }
         }
     }
 }

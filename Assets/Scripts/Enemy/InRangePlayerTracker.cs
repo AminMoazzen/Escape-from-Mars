@@ -40,6 +40,9 @@ public class InRangePlayerTracker : MonoBehaviour
 
     public GameObject GetNearest()
     {
+        // Remove destroied Objects
+        InRangePlayers.RemoveAll(obj => null == obj);
+
         if (!InRangePlayers.Any())
         {
             return null;
