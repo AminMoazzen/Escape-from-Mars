@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Robot
+  - Enemy
+  - RobotDetector
+  - Hazards
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3065069963
+    locked: 0
+  - name: Decoration
+    uniqueID: 1095588799
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Gameplay
+    uniqueID: 1883632431
+    locked: 0
+  - name: DecorationFront
+    uniqueID: 2686239623
+    locked: 0
+  - name: Foreground
+    uniqueID: 485148501
+    locked: 0
+  - name: UI
+    uniqueID: 2882113611
+    locked: 0

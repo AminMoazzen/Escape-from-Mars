@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6478340569636617235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6478340569636617247}
+  - component: {fileID: 6478340569636617244}
+  - component: {fileID: 6478340569636617245}
+  - component: {fileID: 6478340569636617234}
+  - component: {fileID: 9036316433224442733}
+  - component: {fileID: 4099551950261820952}
+  m_Layer: 0
+  m_Name: Fire Drop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6478340569636617247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478340569636617235}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1361626310273248498}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6478340569636617244
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478340569636617235}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6478340569636617245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478340569636617235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edbb8fe0357a494685b9c2e62b184db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: {fileID: 11400000, guid: a177fc7b98da82149856916c58ade33f, type: 2}
+  destroyOnGround: 1
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExitedFromDrop:
+    m_PersistentCalls:
+      m_Calls: []
+  onReachGround:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6478340569636617234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478340569636617235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128ba29419e8eb0479698eabe03e606e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractiveType: {fileID: 11400000, guid: 461e985a94e2415478ca7d694313cba2, type: 2}
+  onHitDrop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6478340569636617245}
+        m_TargetAssemblyTypeName: Drop, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEnterToDrop:
+    m_PersistentCalls:
+      m_Calls: []
+  onExitFromDrop:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!54 &9036316433224442733
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478340569636617235}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4099551950261820952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478340569636617235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b53ce756eb58924b9714a8e06d577ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnObjectHitted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectInDamageRange:
+    m_PersistentCalls:
+      m_Calls: []
+  Damage: 10
+  objectLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  _objectOnAttack: {fileID: 0}
+  _lastDamageTime: 0
+--- !u!1001 &6478340570645374875
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6478340569636617247}
+    m_Modifications:
+    - target: {fileID: 5405101884962245478, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_Name
+      value: Fire Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+--- !u!4 &1361626310273248498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5405101884962245481, guid: e2bbe7435a055644ab05ce97e92c0be7, type: 3}
+  m_PrefabInstance: {fileID: 6478340570645374875}
+  m_PrefabAsset: {fileID: 0}
