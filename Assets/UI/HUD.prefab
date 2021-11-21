@@ -405,7 +405,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 360
+  m_Spacing: 300
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -883,11 +883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 101.53959
+      value: 81.23168
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -993,11 +993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 115.634
+      value: 92.5072
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1059,6 +1059,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: ':: Icer ::'
       objectReference: {fileID: 0}
+    - target: {fileID: 5236144698873406451, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
+      propertyPath: m_Text
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
 --- !u!224 &265771550173172006 stripped
@@ -1111,11 +1115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 130.0578
+      value: 104.04624
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 125
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2548840613132748048, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1176,6 +1180,10 @@ PrefabInstance:
     - target: {fileID: 3976993459907264116, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
       propertyPath: m_Text
       value: ':: Flamer ::'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5236144698873406451, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
+      propertyPath: m_Text
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce28de3ba2ca83d409e404977bddb95f, type: 3}
