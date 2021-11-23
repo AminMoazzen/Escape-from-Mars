@@ -111,7 +111,7 @@ MonoBehaviour:
     _variable: {fileID: 11400000, guid: 56fdcfa38f3d080469b3ed7722641163, type: 2}
   range: 1
   speed: 5
-  rate: 10
+  rate: 5
   aimable:
     serializedVersion: 2
     m_Bits: 119
