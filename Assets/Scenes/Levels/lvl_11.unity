@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Drop (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -1003,6 +1007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Drop (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -1520,6 +1528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Drop (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -1576,6 +1588,10 @@ PrefabInstance:
     - target: {fileID: 6478340569636617235, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_Name
       value: Fire Drop (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
@@ -1752,6 +1768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Drop (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -1901,6 +1921,10 @@ PrefabInstance:
     - target: {fileID: 6478340569636617235, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_Name
       value: Fire Drop (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
@@ -3772,6 +3796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Drop
       objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -4195,6 +4223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Drop (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -4509,11 +4541,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373248405024309590, guid: ea2ce2d551fd039408058c525d070223, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2373248405024309590, guid: ea2ce2d551fd039408058c525d070223, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2373248405024309590, guid: ea2ce2d551fd039408058c525d070223, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4529,7 +4561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373248405024309590, guid: ea2ce2d551fd039408058c525d070223, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -160.75
       objectReference: {fileID: 0}
     - target: {fileID: 2373248405430883229, guid: ea2ce2d551fd039408058c525d070223, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4875,6 +4907,10 @@ PrefabInstance:
     - target: {fileID: 6478340569636617235, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_Name
       value: Fire Drop (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
@@ -5687,6 +5723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Drop (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
       value: 45
@@ -5851,6 +5891,10 @@ PrefabInstance:
     - target: {fileID: 6478340569636617235, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_Name
       value: Fire Drop (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
@@ -6044,6 +6088,10 @@ PrefabInstance:
     - target: {fileID: 6478340569636617235, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_Name
       value: Fire Drop (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder
@@ -6895,6 +6943,10 @@ PrefabInstance:
     - target: {fileID: 6478340569636617235, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_Name
       value: Fire Drop (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478340569636617245, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
+      propertyPath: onSpawn.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6478340569636617247, guid: 94255b6c63953d04da7c5964e27e5757, type: 3}
       propertyPath: m_RootOrder

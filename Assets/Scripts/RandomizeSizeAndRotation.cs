@@ -5,11 +5,16 @@ using UnityEngine;
 public class RandomizeSizeAndRotation : MonoBehaviour
 {
     [Range(0, 1)] [SerializeField] private float minSize = 1;
-    [Range(0, 1)] [SerializeField] private float maxSize = 1;
-    [SerializeField] private bool randomizeRotation;
+    [Range(1, 2)] [SerializeField] private float maxSize = 1;
+    [SerializeField] private bool randomizeRotationX;
+    [SerializeField] private bool randomizeRotationY;
+    [SerializeField] private bool randomizeRotationZ;
 
     private float _minSize;
     private float _maxSize;
+    private float _rotationX;
+    private float _rotationY;
+    private float _rotationZ;
 
     private void Start()
     {
@@ -21,7 +26,17 @@ public class RandomizeSizeAndRotation : MonoBehaviour
 
         trans.localScale = new Vector3(randomSize, randomSize, randomSize);
 
-        if (randomizeRotation)
-            trans.rotation = Quaternion.Euler(trans.rotation.x, trans.rotation.y, Random.Range(0, 360));
+        _rotationX = trans.rotation.x;
+        _rotationY = trans.rotation.y;
+        _rotationZ = trans.rotation.z;
+
+        if (randomizeRotationX)
+            _rotationX = Random.Range(0, (int)2) * 180;
+        if (randomizeRotationY)
+            _rotationY = Random.Range(0, (int)2) * 180;
+        if (randomizeRotationZ)
+            _rotationZ = Random.Range(0, (int)2) * 180;
+
+        trans.localRotation = Quaternion.Euler(_rotationX, _rotationY, _rotationZ);
     }
 }
