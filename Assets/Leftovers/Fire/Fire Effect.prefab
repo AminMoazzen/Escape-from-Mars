@@ -4848,7 +4848,7 @@ MonoBehaviour:
   OnObjectInDamageRange:
     m_PersistentCalls:
       m_Calls: []
-  Damage: 1
+  Damage: 20
   objectLayers:
     serializedVersion: 2
     m_Bits: 256
