@@ -52,12 +52,12 @@ public class NavAgentMovement : MonoBehaviour
         position.Value = transform.position;
     }
 
-    private void OnEnable()
+    private void Start()
     {
         StartAcceptingInput();
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         StopAcceptingInput();
     }

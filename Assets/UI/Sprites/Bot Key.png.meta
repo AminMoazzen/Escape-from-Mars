@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 3643036257453793216
     second: Bot Key_0
+  - first:
+      213: 8782858956923629232
+    second: Bot Key_1
+  - first:
+      213: -5175517552731057043
+    second: Bot Key_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -111,7 +117,7 @@ TextureImporter:
         serializedVersion: 2
         x: 6
         y: 350
-        width: 989
+        width: 300
         height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,6 +128,48 @@ TextureImporter:
       bones: []
       spriteID: 0cfd66dac2aae8230800000000000000
       internalID: 3643036257453793216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bot Key_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 350
+        width: 299
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be6acf00bbf2e970800000000000000
+      internalID: 8782858956923629232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bot Key_2
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 350
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d649aa4f43edc28b0800000000000000
+      internalID: -5175517552731057043
       vertices: []
       indices: 
       edges: []

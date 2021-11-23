@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6907958993924159433}
   - component: {fileID: 6651362438663319309}
   - component: {fileID: -119685524116512231}
+  - component: {fileID: 8059724161181466431}
   m_Layer: 0
   m_Name: Fire Effect
   m_TagString: Untagged
@@ -118,7 +119,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 600
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4801,8 +4802,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1229897333
-  m_SortingLayer: -2
+  m_SortingLayerID: 1883632431
+  m_SortingLayer: 1
   m_SortingOrder: 10
   m_RenderMode: 0
   m_SortMode: 0
@@ -4882,3 +4883,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8059724161181466431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5405101884962245478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847b2789c6e3d43469dbb0ae75fe7364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1

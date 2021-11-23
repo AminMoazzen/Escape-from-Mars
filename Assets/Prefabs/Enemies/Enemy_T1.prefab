@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 498558736945439264}
   - component: {fileID: 4682501002919878747}
   - component: {fileID: 3792917875577491424}
+  - component: {fileID: 7540054587805368685}
   m_Layer: 8
   m_Name: Spine Mecanim GameObject (Enemy)
   m_TagString: Untagged
@@ -79,8 +80,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1883632431
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &4682501002919878747
@@ -142,6 +143,19 @@ MonoBehaviour:
     useCustomMixMode: 1
     layerMixModes: 01000000
     layerBlendModes: 01000000
+--- !u!114 &7540054587805368685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024658225570985323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847b2789c6e3d43469dbb0ae75fe7364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 0
 --- !u!1 &4437876596028342603
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +498,7 @@ MonoBehaviour:
   OnObjectInDamageRange:
     m_PersistentCalls:
       m_Calls: []
-  Damage: 1
+  Damage: 10
   objectLayers:
     serializedVersion: 2
     m_Bits: 128

@@ -6,9 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Intro.unity
+    path: Assets/Scenes/Start.unity
     guid: fbdc58f4c80fa5a48b4d8b7cb36b3815
   - enabled: 1
-    path: Assets/Scenes/Robot Movement.unity
-    guid: 7c34450872e2c5f4dad725ca869ace2e
+    path: Assets/Scenes/Levels/pre-lvl_1.unity
+    guid: 8975a429d2bdb8b44985629974f8e0af
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl_1.unity
+    guid: 95b728fa1005c554ba48eea493915e36
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl_2.unity
+    guid: a50b903e605d156438128eb2f1a8a215
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl_3.unity
+    guid: 58e585c82905d0549866d1b2161cf1eb
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl_4.unity
+    guid: 334fde96ec5dbc143aba31caa3cf333e
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl_7.unity
+    guid: 1e273c0719423f94ba93891d06421405
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl_10.unity
+    guid: b48a34fde0358314ab02ced0d803d385
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl_11.unity
+    guid: 45bf88552d05ef74da44886e32ba0f9a
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 76633ea6a18f3a348a04cc14fe890b2a
   m_configObjects: {}

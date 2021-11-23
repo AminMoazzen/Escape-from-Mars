@@ -19,19 +19,79 @@ MonoBehaviour:
       _sceneName: 
       _sceneIndex: 0
       _isSceneEnabled: 0
-    _variable: {fileID: 11400000, guid: e0bcd1780133cc448a6c8c1d6573f263, type: 2}
+    _variable: {fileID: 11400000, guid: d7795d62f550a2e468e842e3764018ef, type: 2}
   - _useConstant: 0
     _constantValue:
       _sceneName: 
       _sceneIndex: 0
       _isSceneEnabled: 0
-    _variable: {fileID: 11400000, guid: e0bcd1780133cc448a6c8c1d6573f263, type: 2}
+    _variable: {fileID: 11400000, guid: eefff2a450c5b7b41b79903730c32f8c, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      _sceneName: 
+      _sceneIndex: 0
+      _isSceneEnabled: 0
+    _variable: {fileID: 11400000, guid: 663548911a5d18e42bed2a26e8702ae6, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      _sceneName: 
+      _sceneIndex: 0
+      _isSceneEnabled: 0
+    _variable: {fileID: 11400000, guid: c4ca8b5902766f949a99129f18cc7cd8, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      _sceneName: 
+      _sceneIndex: 0
+      _isSceneEnabled: 0
+    _variable: {fileID: 11400000, guid: 0a8836257aa6d244f9b4f4d5a18899a0, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      _sceneName: 
+      _sceneIndex: 0
+      _isSceneEnabled: 0
+    _variable: {fileID: 11400000, guid: 5bcbc18cb61b9414daf0f3cfef3fbbb8, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      _sceneName: 
+      _sceneIndex: 0
+      _isSceneEnabled: 0
+    _variable: {fileID: 11400000, guid: e2a8595496466ac43991193a07b43416, type: 2}
+  - _useConstant: 0
+    _constantValue:
+      _sceneName: 
+      _sceneIndex: 0
+      _isSceneEnabled: 0
+    _variable: {fileID: 11400000, guid: b6de8a0c05f04474fbc2beb0d8dedff2, type: 2}
   onLoadedLevel:
     m_PersistentCalls:
       m_Calls: []
   onWinLevel:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1524d9725dc4f5a47bbf0f830910bd0d, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onLoseLevel:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: add4ccb895ff1f44892447fa66e39a4a, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

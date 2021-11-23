@@ -12,9 +12,11 @@ public class Rendezvous : MonoBehaviour
     [SerializeField] private UnityEvent onLastBotArrived;
 
     private int _remainingBots;
+    private List<int> _botIDs;
 
     private void Start()
     {
+        _botIDs = new List<int>();
         _remainingBots = minBots;
     }
 
@@ -24,12 +26,16 @@ public class Rendezvous : MonoBehaviour
 
         if (bot)
         {
-            _remainingBots--;
+            if (!_botIDs.Contains(bot.GetInstanceID()))
+            {
+                _botIDs.Add(bot.GetInstanceID());
+                _remainingBots--;
 
-            if (_remainingBots == 0)
-                onLastBotArrived.Invoke();
-            else
-                onBotArrived.Invoke();
+                if (_remainingBots == 0)
+                    onLastBotArrived.Invoke();
+                else
+                    onBotArrived.Invoke();
+            }
         }
     }
 }

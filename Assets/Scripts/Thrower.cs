@@ -71,14 +71,14 @@ public class Thrower : MonoBehaviour
     {
         _flyTime = range / speed;
         _instantiateInterval = 1 / rate;
-    }
-
-    private void OnEnable()
-    {
         StartAcceptingInput();
     }
 
-    private void OnDisable()
+    //private void OnEnable()
+    //{
+    //}
+
+    private void OnDestroy()
     {
         StopAcceptingInput();
     }

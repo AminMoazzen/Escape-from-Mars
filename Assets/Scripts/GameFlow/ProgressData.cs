@@ -12,20 +12,21 @@ public class ProgressData : ScriptableObject
     [Serializable]
     private struct SaveData
     {
-        public bool[] hasWonLevel;
+        //public bool[] hasWonLevel;
         public Dictionary<string, int> intParameters;
+
         public Dictionary<string, long> dateTimeParameters;
 
         public SaveData(SaveData data)
         {
-            hasWonLevel = data.hasWonLevel;
+            //hasWonLevel = data.hasWonLevel;
             intParameters = data.intParameters;
             dateTimeParameters = data.dateTimeParameters;
         }
 
         public void Reset()
         {
-            hasWonLevel = new bool[SceneManager.sceneCountInBuildSettings];
+            //hasWonLevel = new bool[SceneManager.sceneCountInBuildSettings];
             intParameters = new Dictionary<string, int>();
             dateTimeParameters = new Dictionary<string, long>();
         }
@@ -79,7 +80,7 @@ public class ProgressData : ScriptableObject
 
     public void SetWinState(int sceneIndex, bool hasWon)
     {
-        _saveData.hasWonLevel[sceneIndex] = hasWon;
+        //_saveData.hasWonLevel[sceneIndex] = hasWon;
     }
 
     public void SetSaveFilePath()

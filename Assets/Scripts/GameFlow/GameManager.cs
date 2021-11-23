@@ -31,14 +31,15 @@ public class GameManager : ScriptableObject
 
         progressData.SetWinState(levels[levelInRange].Value.SceneIndex, true);
         progressData.IncreaseIntParameter(lastLevel, 1);
+        progressData.SaveProgression();
 
-        LoadLevel();
+        //LoadLevel();
         onWinLevel.Invoke();
     }
 
     public void LoseLevel()
     {
-        LoadLevel();
+        //LoadLevel();
         onLoseLevel.Invoke();
     }
 
