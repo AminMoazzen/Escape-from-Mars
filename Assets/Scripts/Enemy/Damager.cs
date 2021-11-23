@@ -6,6 +6,8 @@ public class Damager : MonoBehaviour
 {
     [SerializeField] public UnityEvent<GameObject> OnObjectHitted;
     [SerializeField] public UnityEvent<GameObject> OnObjectInDamageRange;
+    [SerializeField] public UnityEvent<GameObject> OnObjectExitedFromDamageRange;
+    [SerializeField] public UnityEvent<Health, float> OnDamage;
 
 
     [SerializeField] public float Damage = 10;
@@ -37,10 +39,11 @@ public class Damager : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == objectLayers.value)
+        if (objectLayers == (objectLayers | (1 << other.gameObject.layer)))
         {
             if (other.gameObject == _objectOnAttack)
             {
+                OnObjectExitedFromDamageRange.Invoke(gameObject);
                 _objectOnAttack = null;
             }
         }

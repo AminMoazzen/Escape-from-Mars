@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6651362438663319309}
   - component: {fileID: -119685524116512231}
   - component: {fileID: 8059724161181466431}
+  - component: {fileID: -5652459933986353735}
   m_Layer: 0
   m_Name: Fire Effect
   m_TagString: Untagged
@@ -4848,6 +4849,24 @@ MonoBehaviour:
   OnObjectInDamageRange:
     m_PersistentCalls:
       m_Calls: []
+  OnObjectExitedFromDamageRange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -5652459933986353735}
+        m_TargetAssemblyTypeName: ChangeHealthOnDamage, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Damage: 1
   objectLayers:
     serializedVersion: 2
@@ -4896,3 +4915,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 1
+--- !u!114 &-5652459933986353735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5405101884962245478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33bf3efcb34c47544b058108678e3a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -19,10 +19,10 @@ public class Shooter : MonoBehaviour
     [SerializeField] private UnityEvent<GameObject> OnPlayerBeingTargeted;
     [Header("last Gameobject exited from target")]
     [SerializeField] private UnityEvent<GameObject> OnAllPlayerExitedFromTarget;
-    [Header("Gameobject is shooter object")]
-    [SerializeField] private UnityEvent<GameObject> OnShooting;
+    [Header("")]
+    [SerializeField] private UnityEvent<ShootingIntervalHitedEvent> OnShootingInterval;
     [Header("Gameobject is bullet object")]
-    [SerializeField] private UnityEvent<GameObject> OnShoted;
+    [SerializeField] private UnityEvent<BulletShotEvent> OnShoted;
 
     private InRangePlayerTracker _inRangePlayerTracker;
     private GameObject _target;
@@ -82,11 +82,6 @@ public class Shooter : MonoBehaviour
 
         _target = target;
 
-        if (ShootAfterTargeting)
-        {
-            Shoot();
-        }
-
         OnTargetChanged.Invoke(_target);
     }
 
@@ -96,14 +91,30 @@ public class Shooter : MonoBehaviour
 
         if (null != _target)
         {
-            OnShooting.Invoke(gameObject);
+            var evt = new ShootingIntervalHitedEvent()
+            {
+                shooter = this,
+                initTransform = BulletInitLocator.transform,
+                target = _target,
+                prefab = BulletPrefab,
+                initSpeed = ShootInitSpeed
+            };
 
-            var bullet = Instantiate(BulletPrefab, BulletInitLocator.transform.position, BulletInitLocator.transform.rotation);
-            var bulletMovement = bullet.GetComponent<BulletMovement>();
-
-            bulletMovement.Init(_target, _target.transform.position - BulletInitLocator.transform.position, ShootInitSpeed);
-
-            OnShoted.Invoke(bullet);
+            OnShootingInterval.Invoke(evt);
         }
+    }
+
+    public void Shooted()
+    {
+        var evt = new BulletShotEvent()
+        {
+            shooter = this,
+            initTransform = BulletInitLocator.transform,
+            target = _target,
+            prefab = BulletPrefab,
+            initSpeed = ShootInitSpeed
+        };
+
+        OnShoted.Invoke(evt);
     }
 }

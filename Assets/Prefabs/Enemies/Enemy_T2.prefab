@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5160488101141828485}
   - component: {fileID: 7298850720603819945}
   - component: {fileID: 358063949762708928}
-  - component: {fileID: 8098170057369638488}
+  - component: {fileID: 193033733420770434}
   m_Layer: 8
   m_Name: Enemy_T2
   m_TagString: Enemy
@@ -73,7 +73,6 @@ MonoBehaviour:
   OnPlayerExited:
     m_PersistentCalls:
       m_Calls: []
-  InRangePlayers: []
 --- !u!54 &4519395088623835447
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -104,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 9162844749464626932, guid: 9d4d838645bc287459ee05b52671b352, type: 3}
   BulletInitLocator: {fileID: 7454302557615712639}
-  RetargetInterval: 1
+  RetargetInterval: 2
   ShootInterval: 2
   ShootInitSpeed: 2
   ShootAfterTargeting: 1
@@ -113,11 +112,17 @@ MonoBehaviour:
       m_Calls: []
   OnPlayerBeingTargeted:
     m_PersistentCalls:
+      m_Calls: []
+  OnAllPlayerExitedFromTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShootingInterval:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 358063949762708928}
         m_TargetAssemblyTypeName: SetAnimatorStatesAtEvent, Assembly-CSharp
-        m_MethodName: OnValueChangedAt
-        m_Mode: 0
+        m_MethodName: SetTrue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -126,13 +131,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnAllPlayerExitedFromTarget:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8098170057369638488}
+      - m_Target: {fileID: 358063949762708928}
         m_TargetAssemblyTypeName: SetAnimatorStatesAtEvent, Assembly-CSharp
-        m_MethodName: OnValueChangedAt
-        m_Mode: 0
+        m_MethodName: SetFalse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -141,12 +143,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnShooting:
-    m_PersistentCalls:
-      m_Calls: []
   OnShoted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 193033733420770434}
+        m_TargetAssemblyTypeName: BulletCreator, Assembly-CSharp
+        m_MethodName: CreateBullet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!208 &1791944525113210593
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -230,8 +241,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 1824214381676557797}
   fieldName: IsAttacking
-  newValue: 1
---- !u!114 &8098170057369638488
+  trueDelay: 0
+  falseDelay: 0.5
+--- !u!114 &193033733420770434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,12 +252,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6447221333278763634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92e6b596eb8b3e24398375d7e296d73a, type: 3}
+  m_Script: {fileID: 11500000, guid: 472d3f2ef982b8447a773bc7d39951f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: 1824214381676557797}
-  fieldName: IsAttacking
-  newValue: 0
 --- !u!1 &6997727849348272492
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +269,7 @@ GameObject:
   - component: {fileID: 1824214381676557797}
   - component: {fileID: 7010802342770180943}
   - component: {fileID: 342714148927826377}
+  - component: {fileID: 5250325185588765989}
   m_Layer: 8
   m_Name: Spine Mecanim GameObject (Enemy 2)
   m_TagString: Untagged
@@ -402,6 +412,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
+--- !u!114 &5250325185588765989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6997727849348272492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a69c65f41b4904090ee8fdfc5823bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnAnimationEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6514191303519828463}
+        m_TargetAssemblyTypeName: Shooter, Assembly-CSharp
+        m_MethodName: Shooted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7438539587093018165
 GameObject:
   m_ObjectHideFlags: 0
