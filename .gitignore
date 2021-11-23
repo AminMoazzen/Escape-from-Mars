@@ -61,3 +61,5 @@ crashlytics-build.properties
 
 /.vsconfig
 /UserSettings/EditorUserSettings.asset
+/Recordings
+/UserSettings

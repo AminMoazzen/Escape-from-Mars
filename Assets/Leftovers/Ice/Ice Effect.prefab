@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 476096387763186927}
   - component: {fileID: 329560000815679010}
   - component: {fileID: 4716509956147882949}
+  - component: {fileID: 3798464243501100719}
   m_Layer: 0
   m_Name: Ice Effect
   m_TagString: Untagged
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1883632431
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -6883964099344333115, guid: c41cf699e8397a140957f8a772da98c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,6 +103,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3798464243501100719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686764119988554337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847b2789c6e3d43469dbb0ae75fe7364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1
 --- !u!1 &4149319772921889127
 GameObject:
   m_ObjectHideFlags: 0
