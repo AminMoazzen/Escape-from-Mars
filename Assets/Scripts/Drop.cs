@@ -9,14 +9,21 @@ public class Drop : MonoBehaviour
     [SerializeField] private DropType type;
 
     [SerializeField] private bool destroyOnGround;
+    [SerializeField] private float dieDelay;
 
     [Header("Events (Optional)")]
     [SerializeField] private UnityEvent<GameObject> onHit;
 
-    [Header("Events (Optional)")]
     [SerializeField] private UnityEvent<GameObject> OnExitedFromDrop;
+    [SerializeField] private UnityEvent onSpawn;
+    [SerializeField] private UnityEvent onDie;
 
     [SerializeField] private UnityEvent onReachGround;
+
+    private void Start()
+    {
+        onSpawn.Invoke();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,7 +35,7 @@ public class Drop : MonoBehaviour
                 hitter.Hit();
 
                 hitter.EnterToDrop(gameObject);
-                
+
                 onHit.Invoke(other.gameObject);
             }
         }
@@ -50,7 +57,8 @@ public class Drop : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
+        onDie.Invoke();
+        Destroy(gameObject, dieDelay);
     }
 
     public void OnHitGround()
