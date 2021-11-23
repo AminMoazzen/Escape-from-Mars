@@ -28,6 +28,7 @@ public class Thrower : MonoBehaviour
     [SerializeField] private GameEvent[] deactivateOn;
     [SerializeField] private GameEvent[] startThrowingOn;
     [SerializeField] private GameEvent[] stopThrowingOn;
+    [SerializeField] private GameEvent[] freezeOn;
 
     [Header("Events (Optional)")]
     [SerializeField] private UnityEvent onActivate;
@@ -35,6 +36,7 @@ public class Thrower : MonoBehaviour
     [SerializeField] private UnityEvent onDeactivate;
     [SerializeField] private UnityEvent onStartThrowing;
     [SerializeField] private UnityEvent onStopThrowing;
+    [SerializeField] private UnityEvent onFreeze;
 
     private InputAction _aim;
     private InputAction _fire;
@@ -62,6 +64,11 @@ public class Thrower : MonoBehaviour
         }
 
         foreach (GameEvent gEvent in stopThrowingOn)
+        {
+            gEvent.AddListener(StopThrowing);
+        }
+
+        foreach (GameEvent gEvent in freezeOn)
         {
             gEvent.AddListener(StopThrowing);
         }

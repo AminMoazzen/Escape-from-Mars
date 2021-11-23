@@ -80,8 +80,8 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1883632431
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!95 &4682501002919878747
@@ -156,7 +156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
-  precision: 2
 --- !u!1 &4437876596028342603
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +498,7 @@ MonoBehaviour:
   OnObjectInDamageRange:
     m_PersistentCalls:
       m_Calls: []
-  Damage: 1
+  Damage: 10
   objectLayers:
     serializedVersion: 2
     m_Bits: 128

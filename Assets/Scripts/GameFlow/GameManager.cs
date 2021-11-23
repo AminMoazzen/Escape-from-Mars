@@ -33,13 +33,13 @@ public class GameManager : ScriptableObject
         progressData.IncreaseIntParameter(lastLevel, 1);
         progressData.SaveProgression();
 
-        LoadLevel();
+        //LoadLevel();
         onWinLevel.Invoke();
     }
 
     public void LoseLevel()
     {
-        LoadLevel();
+        //LoadLevel();
         onLoseLevel.Invoke();
     }
 

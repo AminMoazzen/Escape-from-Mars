@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826118459783358354}
   - component: {fileID: 3692065252140534249}
+  - component: {fileID: 3234562383343806237}
   m_Layer: 0
   m_Name: Level Light_0
   m_TagString: Untagged
@@ -145,8 +146,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1883632431
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -6895018478548310445, guid: 4a7b36b06707c2b4dab594b7f873f2da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,3 +160,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3234562383343806237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4104539561190340153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847b2789c6e3d43469dbb0ae75fe7364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1
