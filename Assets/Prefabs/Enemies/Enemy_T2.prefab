@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7298850720603819945}
   - component: {fileID: 358063949762708928}
   - component: {fileID: 193033733420770434}
+  - component: {fileID: 6881799142924999684}
   m_Layer: 8
   m_Name: Enemy_T2
   m_TagString: Enemy
@@ -212,6 +213,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ParticleEmitterOnEvent, Assembly-CSharp
+        m_MethodName: EmitParticles
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHealthReset:
     m_PersistentCalls:
       m_Calls: []
@@ -255,6 +268,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472d3f2ef982b8447a773bc7d39951f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6881799142924999684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6447221333278763634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508ef01ad95b80c4a816114a172402eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particle: {fileID: 7029994498313409406, guid: 561ca2ddb73ecb24ebd1c618fdc656e2, type: 3}
+  Delay: 0
 --- !u!1 &6997727849348272492
 GameObject:
   m_ObjectHideFlags: 0
