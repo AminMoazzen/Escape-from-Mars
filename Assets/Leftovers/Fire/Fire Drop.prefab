@@ -161,6 +161,12 @@ MonoBehaviour:
   OnObjectInDamageRange:
     m_PersistentCalls:
       m_Calls: []
+  OnObjectExitedFromDamageRange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
   Damage: 100
   objectLayers:
     serializedVersion: 2
@@ -179,7 +185,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
