@@ -17,6 +17,7 @@ public abstract class BulletMovement : MonoBehaviour
         _target = target;
         _initDirection = initDirection;
         _initSpeed = initSpeed;
+        transform.forward = _initDirection;
 
         _bullet.OnObjectHitted.AddListener(ObjectHitedOn);
 
