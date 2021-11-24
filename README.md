@@ -5,4 +5,4 @@ The game we create for Game Parade fall 2021 game jam.
 https://mohammaddhm.itch.io/escape-from-mars
 
 # Gameplay video of the game
-https://youtu.be/9FhqFNTRy_E
+https://youtu.be/vLuUTYDWWOQ
