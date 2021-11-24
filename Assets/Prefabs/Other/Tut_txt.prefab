@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4810178027855415493}
   - component: {fileID: 4810178027855415494}
   - component: {fileID: 4810178027855415495}
+  - component: {fileID: 5473497105406179326}
   m_Layer: 0
   m_Name: Tut_txt
   m_TagString: Untagged
@@ -81,7 +82,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4810178027855415512}
-  m_Text: Hello World
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -95,3 +96,17 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &5473497105406179326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4810178027855415512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfabec58a4b6bd419dafd6e7156f4ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Hello World
+  charPerSecond: 20

@@ -7563,7 +7563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4810178027855415495, guid: b7db0f98e37c29e45ad850cd70378055, type: 3}
       propertyPath: m_Text
-      value: "use oil to slow\n enemies"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4810178027855415495, guid: b7db0f98e37c29e45ad850cd70378055, type: 3}
       propertyPath: m_FontSize
@@ -7576,6 +7576,12 @@ PrefabInstance:
     - target: {fileID: 4810178027855415512, guid: b7db0f98e37c29e45ad850cd70378055, type: 3}
       propertyPath: m_Name
       value: Tut_txt
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473497105406179326, guid: b7db0f98e37c29e45ad850cd70378055, type: 3}
+      propertyPath: text
+      value: 'use oil to slow
+
+        enemies'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7db0f98e37c29e45ad850cd70378055, type: 3}
