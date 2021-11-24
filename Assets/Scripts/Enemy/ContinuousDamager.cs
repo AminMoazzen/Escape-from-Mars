@@ -17,14 +17,17 @@ public class ContinuousDamager : Damager
 
     public void OnDamageContinuous(GameObject hitObject)
     {
-        var health = hitObject.GetComponentInParent<Health>();
-        if (null != health)
+        if (!IsStoppedAttacking)
         {
-            var damage = (Time.time - _lastDamageTime) * Damage;
+            var health = hitObject.GetComponentInParent<Health>();
+            if (null != health)
+            {
+                var damage = (Time.time - _lastDamageTime) * Damage;
 
-            OnDamage.Invoke(health, damage);
+                OnDamage.Invoke(health, damage);
 
-            _lastDamageTime = Time.time;
+                _lastDamageTime = Time.time;
+            }
         }
     }
 }

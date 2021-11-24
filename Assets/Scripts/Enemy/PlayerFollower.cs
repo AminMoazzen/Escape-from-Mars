@@ -17,6 +17,7 @@ public class PlayerFollower : MonoBehaviour
     private InRangePlayerTracker _inRangePlayerTracker;
     private GameObject _target;
     private float _nextTickTime;
+    private bool _isStoppedFollowing = false;
 
     private void Awake()
     {
@@ -81,9 +82,19 @@ public class PlayerFollower : MonoBehaviour
         OnTargetChanged.Invoke(_target);
     }
 
+    public void StopMovement()
+    {
+        _isStoppedFollowing = true;
+    }
+
+    public void StartMovement()
+    {
+        _isStoppedFollowing = false;
+    }
+
     private void UpdateAgentDestination()
     {
-        if (null == _target)
+        if (_isStoppedFollowing || null == _target)
         {
             _navMeshAgent.isStopped = true;
             return;

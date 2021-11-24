@@ -14,6 +14,19 @@ public class Damager : MonoBehaviour
     [SerializeField] public LayerMask objectLayers;
 
     [SerializeField] private GameObject _objectOnAttack;
+    [SerializeField] private bool _isStoppedAttacking = false;
+    [SerializeField]
+    public bool IsStoppedAttacking
+    {
+        get 
+        {
+            return _isStoppedAttacking;
+        }
+        protected set
+        {
+            _isStoppedAttacking = value;
+        }
+    }
 
     public void Update()
     {
@@ -47,5 +60,15 @@ public class Damager : MonoBehaviour
                 _objectOnAttack = null;
             }
         }
+    }
+
+    public void StopAttacking()
+    {
+        IsStoppedAttacking = true;
+    }
+
+    public void StartAttacking()
+    {
+        IsStoppedAttacking = false;
     }
 }

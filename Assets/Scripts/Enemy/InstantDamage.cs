@@ -9,10 +9,13 @@ public class InstantDamage : Damager
 
     private void OnObjectHittedInstantDamage(GameObject other)
     {
-        var healthComponent = other.GetComponentInParent<Health>();
-        if (null != healthComponent)
+        if (!IsStoppedAttacking)
         {
-            healthComponent.TakeDamage(Damage);
+            var healthComponent = other.GetComponentInParent<Health>();
+            if (null != healthComponent)
+            {
+                healthComponent.TakeDamage(Damage);
+            }
         }
     }
 }

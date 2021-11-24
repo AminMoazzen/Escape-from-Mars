@@ -28,6 +28,7 @@ public class Shooter : MonoBehaviour
     private GameObject _target;
     private float _nextRetargetingTickTime;
     private float _nextShootingTickTime;
+    private bool IsStoppedAttacking = false;
 
     private void Awake()
     {
@@ -89,18 +90,21 @@ public class Shooter : MonoBehaviour
     {
         _nextShootingTickTime = Time.time + ShootInterval;
 
-        if (null != _target)
+        if (!IsStoppedAttacking)
         {
-            var evt = new ShootingIntervalHitedEvent()
+            if (null != _target)
             {
-                shooter = this,
-                initTransform = BulletInitLocator.transform,
-                target = _target,
-                prefab = BulletPrefab,
-                initSpeed = ShootInitSpeed
-            };
+                var evt = new ShootingIntervalHitedEvent()
+                {
+                    shooter = this,
+                    initTransform = BulletInitLocator.transform,
+                    target = _target,
+                    prefab = BulletPrefab,
+                    initSpeed = ShootInitSpeed
+                };
 
-            OnShootingInterval.Invoke(evt);
+                OnShootingInterval.Invoke(evt);
+            }
         }
     }
 
