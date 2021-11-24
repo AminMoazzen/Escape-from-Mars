@@ -11,7 +11,6 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "GameManager.asset", menuName = "New Game Manager", order = 0)]
 public class GameManager : ScriptableObject
 {
-    [SerializeField] private ProgressData progressData;
     [SerializeField] private List<SceneReference> levels;
 
     [Header("Events (Optional)")]
@@ -20,12 +19,11 @@ public class GameManager : ScriptableObject
     [SerializeField] private UnityEvent onWinLevel;
     [SerializeField] private UnityEvent onLoseLevel;
 
+    private int lastLevel = 0;
+
     public void WinLevel()
     {
-        int levelNo = progressData.lastLevel;
-
-        progressData.lastLevel++;
-        progressData.SaveProgression();
+        lastLevel++;
 
         //LoadLevel();
         onWinLevel.Invoke();
@@ -39,7 +37,7 @@ public class GameManager : ScriptableObject
 
     public void LoadLevel()
     {
-        int levelNo = progressData.lastLevel;
+        int levelNo = lastLevel;
         int levelInRange = levelNo % levels.Count;
 
         SceneManager.LoadSceneAsync(levels[levelInRange].Value.SceneIndex).completed += (op) => onLoadedLevel.Invoke(levelNo);
