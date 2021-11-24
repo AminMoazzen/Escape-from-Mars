@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 461242745419102879}
   - component: {fileID: 3101403500231074656}
   - component: {fileID: 2810110729870030018}
+  - component: {fileID: 3657668443226489894}
   m_Layer: 8
   m_Name: Enemy_T1
   m_TagString: Enemy
@@ -456,6 +457,40 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: cc907c3019e16684397d87b879f4f7b0, type: 3}
   - {fileID: 8300000, guid: 025ab0fed1c9dcf429019513ac7297f2, type: 3}
+--- !u!114 &3657668443226489894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437876596028342603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeveloperDescription:
+    _value: .
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 1524d9725dc4f5a47bbf0f830910bd0d, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2089787863021115887}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1000
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4911007171750919716
 GameObject:
   m_ObjectHideFlags: 0
