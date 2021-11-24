@@ -200,7 +200,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 8
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4840693105379385266
 MonoBehaviour:
@@ -569,7 +569,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 1524d9725dc4f5a47bbf0f830910bd0d, type: 2}
   _event: {fileID: 11400000, guid: 1524d9725dc4f5a47bbf0f830910bd0d, type: 2}
   _response:
     m_PersistentCalls:
