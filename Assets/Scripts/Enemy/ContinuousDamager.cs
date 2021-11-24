@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class ContinuousDamager : Damager
 {
@@ -24,9 +22,9 @@ public class ContinuousDamager : Damager
         {
             var damage = (Time.time - _lastDamageTime) * Damage;
 
-            health.TakeDamage(damage);
+            OnDamage.Invoke(health, damage);
 
             _lastDamageTime = Time.time;
-        }            
+        }
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class PlayerFollower : MonoBehaviour
 {
     [SerializeField] public float RetargetInterval;
+    [SerializeField] public bool NeverUnlock;
 
     [SerializeField] private UnityEvent<GameObject> OnTargetChanged;
     [SerializeField] private UnityEvent<GameObject> OnStartedFollowPlayer;
@@ -47,6 +48,11 @@ public class PlayerFollower : MonoBehaviour
 
     public void Retarget()
     {
+        if(NeverUnlock && null != _target)
+        {
+            return;
+        }
+
         GameObject target = null;
         if(_inRangePlayerTracker.InRangePlayers.Any())
         {

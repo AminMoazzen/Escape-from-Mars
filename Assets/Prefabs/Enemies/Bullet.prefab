@@ -137,6 +137,12 @@ MonoBehaviour:
   OnObjectInDamageRange:
     m_PersistentCalls:
       m_Calls: []
+  OnObjectExitedFromDamageRange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamage:
+    m_PersistentCalls:
+      m_Calls: []
   Damage: 10
   objectLayers:
     serializedVersion: 2
@@ -155,4 +161,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStatic: 0
-  precision: 2

@@ -13,7 +13,15 @@ public class InRangePlayerTracker : MonoBehaviour
     [SerializeField] private UnityEvent<GameObject> OnPlayerEntered;
     [SerializeField] private UnityEvent<GameObject> OnPlayerExited;
     
-    public List<GameObject> InRangePlayers = new List<GameObject>();
+    private List<GameObject> _inRangePlayers = new List<GameObject>();
+    public List<GameObject> InRangePlayers
+    {
+        get
+        {
+            _inRangePlayers.RemoveAll(player => null == player);
+            return _inRangePlayers;
+        }
+    }
 
     public void OnTriggerEnter(Collider other)
     {

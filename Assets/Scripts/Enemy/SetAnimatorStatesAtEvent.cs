@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SetAnimatorStatesAtEvent : MonoBehaviour
@@ -6,15 +7,51 @@ public class SetAnimatorStatesAtEvent : MonoBehaviour
 
     [SerializeField] public string fieldName;
 
-    [SerializeField] public bool newValue;
+    [SerializeField] public float trueDelay;
+    [SerializeField] public float falseDelay;
 
-    public void OnValueChangedAt(GameObject gameObject)
+
+    public void SetTrue()
     {
-        if(null == Animator)
+        if (null == Animator)
         {
             return;
         }
-        Animator.SetBool(fieldName, newValue);
+        
+        if(trueDelay > 0)
+        {
+            StartCoroutine(SetValueWithDelay(trueDelay, true));
+        }
+        else
+        {
+            Animator.SetBool(fieldName, true);
+        }
+        
+    }
+
+    public void SetFalse ()
+    {
+        if (null == Animator)
+        {
+            return;
+        }
+
+
+        if (falseDelay > 0)
+        {
+            StartCoroutine(SetValueWithDelay(falseDelay, false));
+        }
+        else
+        {
+            Animator.SetBool(fieldName, false);
+        }
+    }
+
+    private IEnumerator SetValueWithDelay(float delay, bool value)
+    {
+        yield return new WaitForSeconds(delay);
+
+        Animator.SetBool(fieldName, value);
     }
 }
 
