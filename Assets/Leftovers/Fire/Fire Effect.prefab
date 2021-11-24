@@ -4867,7 +4867,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Damage: 1
+  Damage: 10
   objectLayers:
     serializedVersion: 2
     m_Bits: 256
