@@ -1004,7 +1004,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a129cb104035bb54faf0e1f16c156662, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6b4f616ae54a5064ea485fbd99e5ee06, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1235,7 +1235,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 11400000, guid: 2c502acec5bdff845bddf067a865f97b, type: 2}
-  progressData: {fileID: 11400000, guid: e58f439d62ef5df4ea956c90178dbe0e, type: 2}
 --- !u!4 &1495388590
 Transform:
   m_ObjectHideFlags: 0
